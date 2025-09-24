@@ -10,7 +10,7 @@ export default function FirstPage() {
   return (
     <>
       {!showCards ? (
-        <div className="min-h-screen bg-[url('./src/assets/loader.jpg')] bg-cover bg-center p-5 flex flex-col justify-between">
+        <div className="min-h-screen bg-[url('/assets/loader.jpg')] bg-cover bg-center p-5 flex flex-col justify-between">
           <Nav ShowCards={showCards} selected={selected} />
           <form
             className="flex flex-col items-center justify-around border rounded-2xl bg h-100 sm:w-1/2 md:w-1/3 p-5 backdrop-blur-sm shadow-lg"
@@ -35,7 +35,7 @@ export default function FirstPage() {
           <Footer />
         </div>
       ) : (
-        <div className="min-h-screen bg-[url('./src/assets/battlefield.jpg')] bg-cover bg-center p-5 flex flex-col md:justify-between">
+        <div className="min-h-screen bg-[url('/assets/battlefield.jpg')] bg-cover bg-center p-5 flex flex-col md:justify-between">
           <Nav
             ShowCards={showCards}
             selected={selected}

@@ -1,5 +1,5 @@
 import { useState, useEffect , useRef } from "react";
-import avengersSong from "../assets/avengers.mp3";
+import avengersSong from "/assets/avengers.mp3";
 
 
 export default function Footer() {
@@ -53,7 +53,7 @@ export default function Footer() {
   {/* Left side (Volume + Music buttons) */}
   <div className="volumeMusic flex justify-between items-center gap-5 px-5">
     <div className="volume group border bg-white/60 rounded-full p-2 backdrop-blur-sm shadow-lg flex items-center gap-3">
-      <img className="h-7" src="./src/assets/volume.svg" alt="volume" />
+      <img className="h-7" src="/assets/volume.svg" alt="volume" />
       <input
         type="range"
         min="0"
@@ -68,7 +68,7 @@ export default function Footer() {
       className="music border bg-white/60 rounded-full p-2 backdrop-blur-sm shadow-lg cursor-pointer"
       onClick={toggleMusic}
     >
-      <img className="h-7" src="./src/assets/music.svg" alt="music" />
+      <img className="h-7" src="/assets/music.svg" alt="music" />
     </div>
   </div>
 
@@ -77,14 +77,14 @@ export default function Footer() {
     <div className="questionMark border bg-white/20 rounded-full p-2 backdrop-blur-sm shadow-lg">
       {isQuestion ? (
         <img
-          src="./src/assets/close.svg"
+          src="/assets/close.svg"
           alt="close"
           className="h-7 cursor-pointer"
           onClick={()=>handleQuestion()}
         />
       ) : (
         <img
-          src="./src/assets/question.svg"
+          src="/assets/question.svg"
           alt="question"
           className="h-7 cursor-pointer"
           onClick={()=>handleQuestion()}
@@ -103,7 +103,7 @@ export default function Footer() {
         <p>Click on Marvel logo to go back.</p>
       </div>
     </div>
-    <img src="./src/assets/thanos.png" alt="thanos" className="h-60" />
+    <img src="/assets/thanos.png" alt="thanos" className="h-60" />
   </div> }
 
 
