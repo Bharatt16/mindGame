@@ -76,13 +76,13 @@ export default function RandomCharacters({ selected, setSelected }) {
   }
 
   return (
-    <div className="flex gap-6 p-6 flex-wrap items-center justify-center flex-1">
+    <div className="flex md:gap-6 gap-2 p-6 flex-wrap items-center justify-center flex-1">
       {gameOver ? (
         <div className="flex flex-col items-center justify-center w-full">
           <h1 className="text-3xl font-bold text-red-600 mb-4">Game Over!</h1>
           <button
             onClick={restart}
-            className="px-6 py-2 bg-amber-500 text-white rounded-xl shadow-lg hover:bg-amber-600 transition"
+            className="px-6 py-2 bg-amber-500 font-[newOne] text-white rounded-xl shadow-lg hover:bg-amber-600 transition"
           >
             Restart
           </button>
@@ -106,7 +106,7 @@ export default function RandomCharacters({ selected, setSelected }) {
 
           <div
           key={char.id}
-          className="card relative bg-white/30 rounded-2xl md:h-95 h-50 overflow-hidden shadow-amber-50 hover:shadow-blue-200 hover:shadow-2xl text-center md:w-65 w-36 p-4 cursor-pointer"
+          className="card relative bg-white/30 rounded-2xl md:h-95 h-50 overflow-hidden shadow-amber-50 hover:shadow-blue-200 hover:shadow-2xl text-center md:w-65 w-36 p-4 cursor-pointer hover:-translate-y-2 transition-all hover:scale-105"
           onClick={() => handleCardClick(char.id)}
         >
           <div className={`card-inner w-full h-full transition-transform duration-500 ${isFlipping ? "flip" : ""}`}>
@@ -116,9 +116,9 @@ export default function RandomCharacters({ selected, setSelected }) {
               <img
                 src={char.url}
                 alt={char.name}
-                className="w-full md:h-76 h-30 object-cover rounded-lg"
+                className="w-full md:h-76 h-30 object-cover rounded-lg "
               />
-              <h2 className="mt-3 text-lg font-bold">{char.name}</h2>
+              <h2 className="mt-3 text-lg font-bold font-[newOne] ">{char.name}</h2>
             </div>
         
             {/* Back */}

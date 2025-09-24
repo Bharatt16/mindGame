@@ -73,8 +73,8 @@ export default function Footer() {
   </div>
 
   {/* Right side (Question button only) */}
-  <div className="question flex items-center">
-    <div className="questionMark border bg-white/20 rounded-full p-2 backdrop-blur-sm shadow-lg">
+  <div className="question flex items-center" onClick={()=>handleQuestion()}>
+    <div className="questionMark border bg-white/20 rounded-full p-2 backdrop-blur-sm shadow-lg" onClick={()=>handleQuestion()}>
       {isQuestion ? (
         <img
           src="/assets/close.svg"
@@ -94,7 +94,7 @@ export default function Footer() {
   </div>
 
   {/* Thanos absolutely positioned */}
-   {(isQuestion) && <div className="detailsWrapper absolute bottom-0 md:right-10 md:flex right-0">
+   {(isQuestion) && <div className="detailsWrapper absolute bottom-0 md:right-10 md:flex right-0 transition-all">
     <div className="details flex flex-col gap-3">
       <div className="detail-1 border-2 w-85 p-3 font-bold text-blue-50 bg-red-500 rounded-2xl">
         <p>Don't click on the same card twice!</p>
